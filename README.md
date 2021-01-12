@@ -62,7 +62,7 @@ export SECRET_KEY='***'
 python3 manage.py runserver
 ```
 
-### Параментры БД
+### Параметры БД
 * `$DB_NAME` - имя базы данных
 
 Дополнительные настройки:
