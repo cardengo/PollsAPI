@@ -23,7 +23,48 @@
     * один пользователь может участвовать в любом количестве опросов
 - получение пройденных пользователем опросов с детализацией по ответам (что выбрано) по ID уникальному пользователя
 
+### Стек
+* `Django`
+* `Django REST Framework`
+* `PostgreSQL`
 
-### ADMIN
-log: admin
-pass: admin_pass
+
+### Точки входа
+1. POST, PATCH, DELETE:
+* `poll/`
+* `poll/<int:poll_id>/`
+
+POST, PATCH, DELETE:
+* `question/`
+* `question/<int:question_id>/`
+
+
+### Разворачивание (локально)
+```
+python3 -m pip venv env
+source env/bin/activate
+
+python3 -m pip install -r requirements.txt
+```
+#### настройка БД
+```
+export DB_NAME='db_name'
+
+python3 manage.py makemigrations
+python3 manage.py migrate
+python3 manage.py createsuperuser
+```
+#### Запуск сервера
+```
+python3 manage.py runserver
+```
+
+### Параментры БД
+* `$DB_NAME` - имя базы данных
+
+Дополнительные настройки:
+* `DB_USER` - имя пользователя
+* `DB_PASSWORD` - пароль БД
+* `DB_HOST` - хост ДБ (по умолчанию `localhost`)
+* `DB_PORT` - порт ДБ
+   
