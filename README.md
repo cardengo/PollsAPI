@@ -52,7 +52,6 @@ export DB_NAME='db_name'
 
 cd users_polls_api/
 
-python3 manage.py makemigrations
 python3 manage.py migrate
 python3 manage.py createsuperuser
 ```
