@@ -55,7 +55,7 @@ cd users_polls_api/
 python3 manage.py migrate
 python3 manage.py createsuperuser
 ```
-#### Запуск сервера
+#### запуск сервера
 ```
 python3 manage.py runserver
 ```
